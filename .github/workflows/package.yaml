@@ -19,13 +19,12 @@ jobs:
         id: zip
         run: |
           mkdir -p publish/Custom/Scripts/SmittyWerbenJJ/Wardrobe
-          cp *.cs publish/Custom/Scripts/SmittyWerbenJJ/Wardrobe/
+          cp *.cs *.cslist publish/Custom/Scripts/SmittyWerbenJJ/Wardrobe/
           cp meta.json publish/
           sed -i 's/v0.0.0/${{ steps.get_version.outputs.VERSION }}/' publish/meta.json
           cd publish
           zip -r "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var" *
           mv "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var" ../
-          
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
@@ -40,4 +39,4 @@ jobs:
         with:
           files: SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
           name: ${{ github.run_number }}
-          tag_name: ${{ github.run_number }}          
+          tag_name: ${{ github.run_number }}
