@@ -23,7 +23,7 @@ jobs:
           cd publish
           zip -r "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var" *
           mv "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var" ../
-          cd ..
+          
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
@@ -32,10 +32,11 @@ jobs:
           path: SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
 
       - name: release Artifact
-        uses: ncipollo/release-action@v1.12.0
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          files: SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
           name: ${{ github.run_number }}
           tag: ${{ github.run_number }}
           artifacts: "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var"
