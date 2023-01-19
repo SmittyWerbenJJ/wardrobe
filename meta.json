@@ -9,6 +9,8 @@
    "promotionalLink": "https://github.com/SmittyWerbenJJ/wardrobe",
    "programVersion": "1.19.0.5",
    "contentList": [
+      "Custom\\Scripts\\SmittyWerbenJJ\\wardrobe\\VdTextureLoader.cs",
+      "Custom\\Scripts\\SmittyWerbenJJ\\wardrobe\\wardrobe.cslist",
       "Custom\\Scripts\\SmittyWerbenJJ\\wardrobe\\wardrobe.cs"
    ],
    "dependencies": {}
