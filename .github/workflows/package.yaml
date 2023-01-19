@@ -9,9 +9,6 @@ jobs:
     name: Build Project
     runs-on: ubuntu-latest
     steps:
-      - name: Set environment variable
-        run: echo "::set-env name=ZIP_FILE::SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var"
-
       - name: Checkout code
         uses: actions/checkout@v3
         id: get_version
@@ -24,8 +21,8 @@ jobs:
           cp meta.json publish/
           sed -i 's/v0.0.0/${{ steps.get_version.outputs.VERSION }}/' publish/meta.json
           cd publish
-          zip -r $ZIP_FILE *
-          mv $ZIP_FILE ../
+          zip -r "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var" *
+          mv "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var" ../
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
@@ -53,4 +50,4 @@ jobs:
         with:
           name: ${{ github.run_number }}
           tag: ${{ github.run_number }}
-          artifacts: $ZIP_FILE
+          artifacts: "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var"
