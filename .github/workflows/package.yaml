@@ -39,6 +39,7 @@ jobs:
         uses: actions/download-artifact@v3.0.2
         with:
           name: SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
+          path: ~/
 
       - name: Test Artifact Download
         run: ls -R
