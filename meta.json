@@ -1,0 +1,15 @@
+{
+   "licenseType": "CC BY-SA",
+   "creatorName": "VamDazzler,SmittyWerbenJJ",
+   "packageName": "wardrobe",
+   "includeVersionsInReferences": "true",
+   "description": "v0.0.1 wardrobe Description",
+   "credits": "",
+   "instructions": "",
+   "promotionalLink": "https://github.com/SmittyWerbenJJ/wardrobe",
+   "programVersion": "1.19.0.5",
+   "contentList": [
+      "Custom\\Scripts\\SmittyWerbenJJ\\wardrobe\\wardrobe.cs"
+   ],
+   "dependencies": {}
+}
