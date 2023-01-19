@@ -23,6 +23,7 @@ jobs:
           cd publish
           zip -r "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var" *
           mv "SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var" ../
+          cd ..
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
