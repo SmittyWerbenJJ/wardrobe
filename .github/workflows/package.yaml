@@ -27,8 +27,8 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: release.zip
-          path: release.zip
+          name: SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
+          path: SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
 
   release-project:
     name: Release Project
@@ -38,7 +38,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v3.0.2
         with:
-          name: release.zip
+          name: SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
 
       - name: Test Artifact Download
         run: ls -R
