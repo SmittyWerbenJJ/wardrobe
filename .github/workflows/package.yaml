@@ -39,7 +39,7 @@ jobs:
         uses: actions/download-artifact@v3.0.2
         with:
           name: SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
-          path: /release/SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
+          path: ~/release/SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
 
       - name: Test Artifact Download
         run: ls -R
@@ -51,4 +51,4 @@ jobs:
         with:
           name: ${{ github.run_number }}
           tag: ${{ github.run_number }}
-          artifacts: /release/SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
+          artifacts: ~/release/SmittyWerbenJJ.Wardrobe.${{ github.run_number }}.var
